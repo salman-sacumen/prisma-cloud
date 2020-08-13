@@ -1,0 +1,37 @@
+{namespace plugin.prisma}
+
+/**
+ * @param repository Repository object
+ */
+{template .repositorySettings}
+<html>
+<head>
+    <meta name="decorator" content="bitbucket.repository.settings">
+    <meta name="projectKey" content="{$repository.project.key}">
+    <meta name="repositorySlug" content="{$repository.slug}">
+    <meta name="activeTab" content="repository-settings-plugin-tab">
+    <title>{$repository.slug} / Example Tab</title>
+</head>
+<body>
+    <h3>Prisma Cloud</h3>
+    <p>Welcome to Prisma cloud repository settings page.</p>
+     <form id="admin" class="aui" method="post">
+      <div class="field-group">
+        <label for="name">Prisma Url</label>
+        <input type="text" id="url" name="url" class="text">
+      </div>
+      <div class="field-group">
+        <label for="time">Prisma Username</label>
+        <input type="text" id="name" name="name" class="text">
+      </div>
+       <div class="field-group">
+        <label for="time">Prisma Password</label>
+        <input type="password" id="password" name="password" class="text">
+      </div>
+      <div class="field-group">
+        <input type="submit" value="SAVE" class="button">
+      </div>
+    </form>
+</body>
+</html>
+{/template}
